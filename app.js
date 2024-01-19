@@ -12,12 +12,10 @@ app.use((req, res, next) =>{
   if (req.method !== 'GET') {
     next(createError(405))
     return
+    avoid
   }
   next(createError(404))
 })
-
-
-
 app.use((err, req, res, next) =>{
   res.status(err.status || 500)
   res.send(err.message)
