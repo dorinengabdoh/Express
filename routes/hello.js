@@ -13,8 +13,6 @@ const hello = `<html>
                   <h1>Hello World</h1>
                   </body>
               </html>`
-
-
 router.get('/', (req, res) => {
   res.send(hello)
 })
